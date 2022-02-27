@@ -11,7 +11,7 @@ body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 120vh;
     @include animação-fundo-netflix-login;
     font-family: $font;
     .header__container {
@@ -82,22 +82,24 @@ body {
         background-color: #050504da;
         @include queries (300px){
             max-width: 90%;
-            margin-top: 80px;
+            margin-top: 40px;
+            margin-top: 100px;
         }
         @include queries (546px){
             max-width: 80%;
-            margin-top: 60px;
+           
         }
         @include queries (620px){
             max-width: 70%;
-            margin-top: 60px;
+            
         }
         @include queries (768px){
                     max-width: 50%;
-                    margin-top: 80px;
+                  
         }
         @include queries (1000px){
                     max-width: 40%;
+                    margin-top: 100px;
         }
         @include queries (1200px){
                     max-width: 40%;
