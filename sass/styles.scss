@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    @include queries (300px){
+    @media all and (max-width:450px){
         height: 120vh;
     }
    
