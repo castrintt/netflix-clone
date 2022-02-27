@@ -103,6 +103,7 @@ body .container__form {
 @media all and (min-width: 300px) {
   body .container__form {
     max-width: 90%;
+    margin-top: 50px;
   }
 }
 @media all and (min-width: 546px) {
