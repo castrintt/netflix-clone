@@ -29,6 +29,11 @@ body {
   animation-direction: alternate;
   font-family: "GothamBold";
 }
+@media all and (min-width: 300px) {
+  body {
+    height: 120vh;
+  }
+}
 body .header__container {
   display: flex !important;
   flex-direction: row;
