@@ -82,13 +82,15 @@ body {
         background-color: #050504da;
         @include queries (300px){
             max-width: 90%;
-            margin-top: 50px;
+            margin-top: 80px;
         }
         @include queries (546px){
             max-width: 80%;
+            margin-top: 60px;
         }
         @include queries (620px){
             max-width: 70%;
+            margin-top: 60px;
         }
         @include queries (768px){
                     max-width: 50%;
