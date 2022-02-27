@@ -21,7 +21,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 120vh;
+  height: 100vh;
   animation-name: animacao-fundo;
   animation-duration: 150s;
   animation-iteration-count: infinite;
