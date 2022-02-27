@@ -1,0 +1,211 @@
+@import "animation","fonts","queries" ;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/img/fundo-netflix-login.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    @include animação-fundo-netflix-login;
+    font-family: $font;
+    .header__container {
+        .header__logo {
+            @include queries (768px){
+                width: 500px !important;
+            }
+            @include queries (768px){
+                width: 200px;
+            }
+        }
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content:space-between;
+        align-items: center;
+        .header__opcoes {
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            vertical-align: middle;
+           
+            .idioma {
+                select {
+                    padding: 10px;
+                    border-radius:5px ;
+                    background-color: grey;
+                    color: white;
+                    font-size: 0.8rem;
+                    @include queries (768px){
+                        font-size: 1rem;
+                        padding: 12px;
+                    }
+                }
+               
+            }
+        }
+        .botao__entrar {
+            background-color: red;
+            color: white;
+            font-weight: lighter;
+            @include queries (768px){
+                padding: 10px;
+                width: 100px;
+                margin-left: 10px;
+                
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                @include queries (768px){
+                    font-size: 1rem;
+                    
+                }
+            }
+        }
+    }
+    .container__form {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include queries (768px){
+               top: 45%;     
+        }
+        transform: translate(-50%, -50%);
+        background-color: #050504da;
+        @include queries (300px){
+            max-width: 90%;
+        }
+        @include queries (546px){
+            max-width: 80%;
+        }
+        @include queries (620px){
+            max-width: 70%;
+        }
+        @include queries (768px){
+                    max-width: 50%;
+                    margin-top: 80px;
+        }
+        @include queries (1000px){
+                    max-width: 40%;
+        }
+        @include queries (1200px){
+                    max-width: 40%;
+        }
+        @include queries (1300px){
+                    max-width: 30%;
+        }
+        @include queries (1440px){
+            max-width: 30%;
+        }
+        .formulario {
+            padding: 40px;
+            .titulo {
+                color: white;
+                font-size: 2rem;
+            }
+            #email {
+                background-color: rgb(107, 106, 106);
+                border: none;
+                
+            }
+            #senha {
+                background-color: rgb(107, 106, 106);
+                border: none;
+            }
+            .botao__entrar--forms {
+                background-color: red;
+                
+                padding: 10px 0;
+                border: none;
+                @include queries (768px){
+                    padding: 15px 0;
+                    font-size: 1.2rem;
+                }
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+              
+            }
+            .check__flex {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                vertical-align: middle;
+                font-size: 0.9rem;
+                @include queries (768px){
+                    font-size:.95rem;
+                }
+                .checkbox__position {
+                    color: grey;
+                   
+                    .checkbox:checked {
+                        background-color: grey;
+                        
+                    }
+                   
+                }
+                 .texto__ajuda {
+                        text-decoration: none;
+                        
+                 }
+                 .texto__ajuda:hover{
+                     text-decoration: underline;
+                 }
+                
+            }
+        }
+    }
+    .aside__container {
+        padding: 10px 40px 20px 40px;
+        color: grey;
+        font-size: .85rem;
+        @include queries (768px){
+         font-size: .9rem;           
+        }
+      
+       .bi-facebook {
+           font-size: 1.1rem;
+           color: rgb(76, 76, 202);
+       }
+       .novo__usuario {
+           a {
+               text-decoration: none;
+           }
+           a:hover {
+               text-decoration: underline;
+           }
+           .novo__usuario--texto {
+               font-size: 1rem;
+               @include queries (768px){
+                font-size: 1.1rem;       
+            }
+           }
+       }
+       .recaptcha {
+          
+           .recaptcha__texto {
+              font-size: 0.75rem;
+              text-align: justify;
+              @include queries (768px){
+                font-size: .9rem;       
+            }
+              a {
+                  text-decoration: none;
+              }
+              a:hover {
+                  text-decoration: underline;
+              }
+           }
+       }
+    }
+}

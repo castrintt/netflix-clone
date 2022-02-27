@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/netflix_macos_bigsur_icon_189917.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <header class="container header__container">
+        <div class="header__logo">
+            <img src="img/logo.png.opdownload" width="150" alt="">
+        </div>
+        <div class="header__opcoes">
+            <div class="idioma">
+                <select class="form">
+                    <option selected>EN</option>
+                    <option value="1">PT-BR</option>
+                  </select>
+            </div>
+            <div class="entrar">
+                <button type="submit"class="btn btn-primary botao__entrar"><a href="home.html">Sign In</a></button>
+            </div>
+        </div>
+
+    </header>
+    <div class="container container__form">
+        <form action="#" class="formulario">
+            <div class="row__titulo">
+                <h2 class="titulo mb-4">Sign In</h2>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" name="email" id="email" class="form-control email" required>
+                <label for="email"class="form-label">Email or phone number</label>
+            </div>
+            <div class="form-floating mb-5">
+                <input type="password" name="senha" id="senha" class="form-control senha" required>
+                <label for="senha"class="form-label">Password</label>
+            </div>
+            <button type="submit" class="col-12 btn btn-primary botao__entrar--forms mb-2 mb-md-3"><a href="home.html">Sign In</a></button>
+            <div class="form-check check__flex">
+                <div class="checkbox__position">
+                    <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Remember me
+                    </label>
+                </div>
+                <div class="ajuda">
+                    <a href="#" class="texto__ajuda">Need help?</a>
+                </div>
+              </div>   
+        </form>
+        <div class="aside__container container">
+            <div class="facebook__conect">
+                <p class="facebook__link">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    Conect whit Facebook
+                </p>
+             </div>
+             <div class="novo__usuario">
+                 <p class="novo__usuario--texto">New here? <a href="#">subscribe now.</a></p>
+             </div>
+             <div class="recaptcha">
+                 <p class="recaptcha__texto">
+                     
+This page is protected by Google reCAPTCHA to ensure you are not a robot. <a href="#">know more.</a>
+             </p>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@mixin animação-fundo-netflix-login {
+    animation-name: animacao-fundo;
+    animation-duration: 150s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes animacao-fundo {
+    to {
+        background-position: 0 50%;
+    }
+    from{
+        background-position: 100% 50%;
+    }
+}

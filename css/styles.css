@@ -1,0 +1,243 @@
+@keyframes animacao-fundo {
+  to {
+    background-position: 0 50%;
+  }
+  from {
+    background-position: 100% 50%;
+  }
+}
+@font-face {
+  font-family: "GothamBold";
+  src: url(/fonts/Gotham-Font/Gotham-Bold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/img/fundo-netflix-login.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  animation-name: animacao-fundo;
+  animation-duration: 150s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  font-family: "GothamBold";
+}
+body .header__container {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media all and (min-width: 768px) {
+  body .header__container .header__logo {
+    width: 500px !important;
+  }
+}
+@media all and (min-width: 768px) {
+  body .header__container .header__logo {
+    width: 200px;
+  }
+}
+body .header__container .header__opcoes {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  vertical-align: middle;
+}
+body .header__container .header__opcoes .idioma select {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: grey;
+  color: white;
+  font-size: 0.8rem;
+}
+@media all and (min-width: 768px) {
+  body .header__container .header__opcoes .idioma select {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+body .header__container .botao__entrar {
+  background-color: red;
+  color: white;
+  font-weight: lighter;
+}
+@media all and (min-width: 768px) {
+  body .header__container .botao__entrar {
+    padding: 10px;
+    width: 100px;
+    margin-left: 10px;
+  }
+}
+body .header__container .botao__entrar a {
+  color: white;
+  text-decoration: none;
+}
+@media all and (min-width: 768px) {
+  body .header__container .botao__entrar a {
+    font-size: 1rem;
+  }
+}
+body .container__form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #050504da;
+}
+@media all and (min-width: 768px) {
+  body .container__form {
+    top: 45%;
+  }
+}
+@media all and (min-width: 300px) {
+  body .container__form {
+    max-width: 90%;
+  }
+}
+@media all and (min-width: 546px) {
+  body .container__form {
+    max-width: 80%;
+  }
+}
+@media all and (min-width: 620px) {
+  body .container__form {
+    max-width: 70%;
+  }
+}
+@media all and (min-width: 768px) {
+  body .container__form {
+    max-width: 50%;
+    margin-top: 80px;
+  }
+}
+@media all and (min-width: 1000px) {
+  body .container__form {
+    max-width: 40%;
+  }
+}
+@media all and (min-width: 1200px) {
+  body .container__form {
+    max-width: 40%;
+  }
+}
+@media all and (min-width: 1300px) {
+  body .container__form {
+    max-width: 30%;
+  }
+}
+@media all and (min-width: 1440px) {
+  body .container__form {
+    max-width: 30%;
+  }
+}
+body .container__form .formulario {
+  padding: 40px;
+}
+body .container__form .formulario .titulo {
+  color: white;
+  font-size: 2rem;
+}
+body .container__form .formulario #email {
+  background-color: #6b6a6a;
+  border: none;
+}
+body .container__form .formulario #senha {
+  background-color: #6b6a6a;
+  border: none;
+}
+body .container__form .formulario .botao__entrar--forms {
+  background-color: red;
+  padding: 10px 0;
+  border: none;
+}
+@media all and (min-width: 768px) {
+  body .container__form .formulario .botao__entrar--forms {
+    padding: 15px 0;
+    font-size: 1.2rem;
+  }
+}
+body .container__form .formulario .botao__entrar--forms a {
+  color: white;
+  text-decoration: none;
+}
+body .container__form .formulario .check__flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+@media all and (min-width: 768px) {
+  body .container__form .formulario .check__flex {
+    font-size: 0.95rem;
+  }
+}
+body .container__form .formulario .check__flex .checkbox__position {
+  color: grey;
+}
+body .container__form .formulario .check__flex .checkbox__position .checkbox:checked {
+  background-color: grey;
+}
+body .container__form .formulario .check__flex .texto__ajuda {
+  text-decoration: none;
+}
+body .container__form .formulario .check__flex .texto__ajuda:hover {
+  text-decoration: underline;
+}
+body .aside__container {
+  padding: 10px 40px 20px 40px;
+  color: grey;
+  font-size: 0.85rem;
+}
+@media all and (min-width: 768px) {
+  body .aside__container {
+    font-size: 0.9rem;
+  }
+}
+body .aside__container .bi-facebook {
+  font-size: 1.1rem;
+  color: #4c4cca;
+}
+body .aside__container .novo__usuario a {
+  text-decoration: none;
+}
+body .aside__container .novo__usuario a:hover {
+  text-decoration: underline;
+}
+body .aside__container .novo__usuario .novo__usuario--texto {
+  font-size: 1rem;
+}
+@media all and (min-width: 768px) {
+  body .aside__container .novo__usuario .novo__usuario--texto {
+    font-size: 1.1rem;
+  }
+}
+body .aside__container .recaptcha .recaptcha__texto {
+  font-size: 0.75rem;
+  text-align: justify;
+}
+@media all and (min-width: 768px) {
+  body .aside__container .recaptcha .recaptcha__texto {
+    font-size: 0.9rem;
+  }
+}
+body .aside__container .recaptcha .recaptcha__texto a {
+  text-decoration: none;
+}
+body .aside__container .recaptcha .recaptcha__texto a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */
