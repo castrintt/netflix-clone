@@ -13,7 +13,7 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     @media all and (max-width:450px){
-        height: 120vh;
+        height: 100vh;
     }
    
     @include animação-fundo-netflix-login;
@@ -79,15 +79,11 @@ body {
         position: absolute;
         left: 50%;
         top: 50%;
-        @include queries (768px){
-               top: 45%;     
-        }
         transform: translate(-50%, -50%);
         background-color: #050504da;
         @include queries (300px){
             max-width: 90%;
-            margin-top: 40px;
-            margin-top: 100px;
+            margin-top: 20px;
         }
         @include queries (546px){
             max-width: 80%;

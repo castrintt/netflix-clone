@@ -8,5 +8,17 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/castrintt/netflix-clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/castrintt/netflix-clone/issues"
+  },
+  "homepage": "https://github.com/castrintt/netflix-clone#readme",
+  "dependencies": {
+    "node": "^17.4.0",
+    "sass": "^1.49.9"
+  }
 }
