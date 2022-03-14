@@ -29,6 +29,9 @@ body {
   animation-direction: alternate;
   font-family: "GothamBold";
 }
+body #lingua_pt {
+  display: none;
+}
 @media all and (max-width: 450px) {
   body {
     height: 100vh;
@@ -59,7 +62,7 @@ body .header__container .header__opcoes {
   justify-content: space-evenly;
   vertical-align: middle;
 }
-body .header__container .header__opcoes .idioma select {
+body .header__container .header__opcoes .idioma #selecao {
   padding: 10px;
   border-radius: 5px;
   background-color: grey;
@@ -67,7 +70,7 @@ body .header__container .header__opcoes .idioma select {
   font-size: 0.8rem;
 }
 @media all and (min-width: 768px) {
-  body .header__container .header__opcoes .idioma select {
+  body .header__container .header__opcoes .idioma #selecao {
     font-size: 1rem;
     padding: 12px;
   }
