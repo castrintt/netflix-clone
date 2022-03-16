@@ -1,4 +1,5 @@
 "use strict"
+
 //criando um elemento de div com texto para que o usuario verifica se email ou senha/ email e senha estão corretos
 
 const janela_verificacao = document.createElement("div")
@@ -11,10 +12,25 @@ janela_verificacao.style.display = "none"
 janela_verificacao.style.position = "absolute"
 janela_verificacao.style.zIndex = "1"
 janela_verificacao.style.top = "-90px"
-janela_verificacao.style.left = "-10px"
+janela_verificacao.style.left = "50%"
+janela_verificacao.style.transform = "translate(-50%)"
 janela_verificacao.style.textAlign = "center"
+
+
 const resposta = document.querySelector('.res')
 resposta.appendChild(janela_verificacao)
+
+//SPINNER
+
+const spin = document.querySelector(".posicao__spinner")
+spin.style.position = "absolute"
+spin.style.left = "40%"
+spin.style.top = "20%"
+spin.style.width = "50px"
+spin.style.height = "50px"
+spin.style.color = "red"
+spin.style.display = "none"
+spin.style.zIndex  = "1"
 
 
 const botao  = document.getElementById("botao")
@@ -52,28 +68,56 @@ botao.addEventListener("click", function(e) {
     let valor_email = email.value 
     if(verifica_email(valor_email) == true && verifica_senha(valor_senha) == true){
         janela_verificacao.style.display = "block"
-        janela_verificacao.innerText = "Login Valido!"
+        janela_verificacao.innerText = "Login"
+        spin.style.display = "block"
+        setTimeout(() => {
+            spin.style.display = "none"
+        }, 1400);
         setTimeout(() => {
             janela_verificacao.style.display = "none"
+           
+        }, 1500);
+        setTimeout(() => {
             window.location = "home.html"
         }, 2000);
     }else if(verifica_email(valor_email) == true && verifica_senha(valor_senha) == false){
         janela_verificacao.style.display = "block"
-        janela_verificacao.innerText = "Senha invalida!"
+        janela_verificacao.innerText = "Invalid Password"
+        spin.style.display = "block"
+        setTimeout(() => {
+            spin.style.display = "none"
+        }, 1400);
         setTimeout(() => {
             janela_verificacao.style.display = "none"
+        }, 1500);
+        setTimeout(() => {
+            window.location = "login.html"
         }, 2000);
     }else if(verifica_email(valor_email) == false && verifica_senha(valor_senha) == true){
         janela_verificacao.style.display = "block"
-        janela_verificacao.innerText = "Email invalido"
+        janela_verificacao.innerText = "Invalid Email"
+        spin.style.display = "block"
+        setTimeout(() => {
+            spin.style.display = "none"
+        }, 1400);
         setTimeout(() => {
             janela_verificacao.style.display = "none"
+        }, 1500);
+        setTimeout(() => {
+            window.location = "login.html"
         }, 2000);
     }else if(verifica_email(valor_email) == false && verifica_senha(valor_senha) == false){
         janela_verificacao.style.display = "block"
-        janela_verificacao.innerText = "Email e senha incorretos"
+        janela_verificacao.innerText = "Email or Password invalid!"
+        spin.style.display = "block"
+        setTimeout(() => {
+            spin.style.display = "none"
+        }, 1400);
         setTimeout(() => {
             janela_verificacao.style.display = "none"
+        }, 1500);
+        setTimeout(() => {
+            window.location = "login.html"
         }, 2000);
     }
     
@@ -92,30 +136,32 @@ botao_top.addEventListener("click", function(e) {
     let valor_email = email.value 
     if(verifica_email(valor_email) == true && verifica_senha(valor_senha) == true){
         janela_verificacao.style.display = "block"
-        janela_verificacao.innerText = "Login Valido!"
+        janela_verificacao.innerText = "Login!"
         setTimeout(() => {
             janela_verificacao.style.display = "none"
             window.location = "home.html"
         }, 2000);
     }else if(verifica_email(valor_email) == true && verifica_senha(valor_senha) == false){
         janela_verificacao.style.display = "block"
-        janela_verificacao.innerText = "Senha invalida!"
+        janela_verificacao.innerText = "Password Invalid"
         setTimeout(() => {
             janela_verificacao.style.display = "none"
         }, 2000);
     }else if(verifica_email(valor_email) == false && verifica_senha(valor_senha) == true){
         janela_verificacao.style.display = "block"
-        janela_verificacao.innerText = "Email invalido"
+        janela_verificacao.innerText = "Invalid Email"
         setTimeout(() => {
             janela_verificacao.style.display = "none"
         }, 2000);
     }else if(verifica_email(valor_email) == false && verifica_senha(valor_senha) == false){
         janela_verificacao.style.display = "block"
-        janela_verificacao.innerText = "Email e senha incorretos"
+        janela_verificacao.innerText = "Email or Password Invalid"
         setTimeout(() => {
             janela_verificacao.style.display = "none"
         }, 2000);
     }
     
 })
+
+
 

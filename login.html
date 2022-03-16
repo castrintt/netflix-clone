@@ -12,17 +12,17 @@
     <link rel="shortcut icon" href="img/netflix_macos_bigsur_icon_189917.ico" type="image/x-icon">
     <script src="/scripts/verificacao.js" defer></script>
     <script src="/scripts/lingua.js" defer></script>
+    <script src="/scripts/spinner.js" defer></script>
     
 </head>
 <body>
-    <div id="lingua_inglesa">
         <header class="container header__container">
             <div class="header__logo">
                 <img src="img/logo.png.opdownload" width="150" alt="">
             </div>
             <div class="header__opcoes">
                 <div class="idioma">
-                    <select class="form" id="selecao">
+                    <select class="form selecao_idioma" id="selecao">
                         <option selected value="en"  class="opcao en">EN</option>
                         
                         <option value="pt"  class="opcao pt">PT-BR</option>
@@ -35,6 +35,9 @@
         </header>
         <div class="container container__form">
             <form action="#" class="formulario">
+                <div class="spinner-border posicao__spinner" id="spinner" role="status">
+                    <span class="visually-hidden ">Loading...</span>
+                </div>
                 <div class="row__titulo">
                     <h2 class="titulo mb-4">Sign In</h2>
                 </div>
@@ -78,75 +81,6 @@
                  </div>
             </div>
         </div>
-    </div>
-    
-
-<!-- HTML EM PORTUGUES-->
-
-
-    <div id="lingua_pt">
-        <header class="container header__container">
-            <div class="header__logo">
-                <img src="img/logo.png.opdownload" width="150" alt="">
-            </div>
-            <div class="header__opcoes">
-                <div class="idioma">
-                    <select class="form" id="selecao">
-                        <option value="1"  class="opcao__en en">EN</option>
-                        <option selected value="2" class="opcao pt" >PT-BR</option>
-                      </select>
-                </div>
-                <div class="entrar">
-                    <button type="submit"class="btn btn-primary botao__entrar" id="submit__top--button"><a href="home.html">Entrar</a></button>
-                </div>
-            </div>
-        </header>
-        <div class="container container__form">
-            <form action="#" class="formulario">
-                <div class="row__titulo">
-                    <h2 class="titulo mb-4">Entrar</h2>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" name="email" id="email" class="form-control email" required>
-                    <label for="email"class="form-label">Email ou numero de telefone</label>
-                    <div class="res"></div>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" name="senha" id="senha" class="form-control senha" required>
-                    <label for="senha"class="form-label">Senha</label>
-                </div>
-                <button type="submit" class="col-12 btn btn-primary botao__entrar--forms mb-2 mb-md-3" id="botao"><a href="#">Entrar</a></button>
-                <div class="form-check check__flex">
-                    <div class="checkbox__position">
-                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Lembrar-me
-                        </label>
-                    </div>
-                    <div class="ajuda">
-                        <a href="#" class="texto__ajuda">Precisa de ajuda?</a>
-                    </div>
-                  </div>
-            </form>
-            <div class="aside__container container">
-                <div class="facebook__conect">
-                    <p class="facebook__link">
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        Conecte-se pelo Facebook
-                    </p>
-                 </div>
-                 <div class="novo__usuario">
-                     <p class="novo__usuario--texto">Novo aqui? <a href="#">Inscreva-se agora.</a></p>
-                 </div>
-                 <div class="recaptcha">
-                     <p class="recaptcha__texto">
-                         Essa página é protegida pelo Google reCAPTCHA para ter certeza que você não é um robô
-                     <a href="#">Saiba mais.</a>
-                 </p>
-                 </div>
-            </div>
-        </div>
-    </div>
- 
+        
 </body>
 </html>

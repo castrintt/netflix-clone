@@ -1,24 +1,40 @@
-const selectElement = document.querySelector("#selecao")
+"use strict"
 
-const documento_ingles = document.querySelector("#lingua_inglesa")
-const documento_pt = document.querySelector("#lingua_pt")
+const idioma = document.querySelector(".selecao_idioma")
 
-const utterance = new SpeechSynthesisUtterance()
+const linguaSpinnerEn = document.querySelector(".posicao__spinner")
+linguaSpinnerEn.style.position = "absolute"
+linguaSpinnerEn.style.left = "40%"
+linguaSpinnerEn.style.top = "20%"
+linguaSpinnerEn.style.width = "50px"
+linguaSpinnerEn.style.height = "50px"
+linguaSpinnerEn.style.color = "red"
+linguaSpinnerEn.style.display = "none"
+linguaSpinnerEn.style.zIndex  = "1"
 
- const setVoice = event => {
-     console.log("oi")
-     console.log(event.target)
-     //utterance.voice =
-     if(event.target.value == "en"){
-         documento_ingles.style.display = "block"
-         documento_pt.style.display = "none"
-     }else if(event.target.value == "pt"){
-         documento_ingles.style.display = "none"
-         documento_pt.style.display = "block"
+
+ //evento mudar idioma
+
+ 
+idioma.addEventListener("change", (event) => {
+    //console.log(event.target.value)
+    let valor = event.target.value
+    if(valor == "en"){
+        linguaSpinnerEn.style.display = "block"
+        setTimeout(() => {
+            linguaSpinnerEn.style.display = "none"
+        }, 1400);
+        setTimeout(() => {
+            window.location = "login.html"
+        }, 1500);
+    }else if(valor == "pt"){
+        linguaSpinnerEn.style.display = "block"
+        setTimeout(() => {
+            linguaSpinnerEn.style.display = "none"
+        }, 1400);
+        setTimeout(() => {
+            window.location = "login_br.html"
+        }, 1500);
     }
-
- }
-
-selectElement.addEventListener("change", setVoice)
-
+})
 

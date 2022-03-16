@@ -12,9 +12,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-        #lingua_pt {
-            display: none;
-        }
+    #spinner {
+        display: none !important;
+    }
     @media all and (max-width:450px){
         height: 100vh;
     }
